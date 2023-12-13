@@ -1,38 +1,262 @@
+*{
+  margin: 0;
+  padding: 0;
+  border-radius:0;
+  
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.container li {
+  list-style-type: none;
+}
+
+.container a{
+  display: inline-block;
+  padding:25px 25px 0 25px;
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
+
+.container a:hover{
+  color: lightsteelblue;
+}
+
+.container1{
+  height: 100vW;
+  display: grid;
+  grid-template-areas: "nav" 
+                       "hero" 
+                       "foodList"
+                       "testimonial" 
+                       "abouts" 
+                       "footer";
+  
+grid-template-columns: repeat(12,1fr);
+ grid-column-gap: 2.0vw;
+}
+
+.navArea{
+  margin: 0 70px;
+  grid-area: nav;
+  grid-column: 1 / span 12;
+}
+
+.hero{
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-area:hero;
+  grid-column: 1 / span 12;
+  background: linear-gradient(
+    to bottom,
+    #495e57 0%,
+    #495e57 75%,
+    white 75%,
+    white 100%
+  );
+  
+  display: flex;
+  
+}
+
+.heroFlex{
+  display: inline-block;
+  font-size: 1.0vw;
+  font-family:'Karla';
+  color: white;
+
+}
+
+.heroHead{
+  font-weight: bold;
+  font-family: 'Markazi Text';
+  font-size: 2vw;
+  color: #F4CE14;
+  margin:0;
+}
+
+.heroHead1{
+  font-weight: bold;
+  font-family: 'Markazi Text';
+  font-size: 1.8vw;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.highlight{
+  margin:0 20vw 2.5vw 16vw;
+  padding:1.25vw 1.25vw 1.25vw 1.25vw;
+  width: 15.25vw;
+  height: 25vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.foodImg{
+  width: 20vw;
+  height: 25vw;
+  border-width: 1dvw;
+  border-radius: 16px;
+  border-color: black;
+  justify-content: flex-end;
+
+  margin: 1vw 0 0 10vw;
+}
+
+.specials{
+  grid-area:foodList;
+  grid-column: 1 / span 12;
+  display: inline;
+  margin: 0vw 15vw 5vw 17vw;
+}
+
+.testimonials{
+  grid-area:testimonial;
+  grid-column: 1 / span 12;
+  background-color: #495e57;
+}
+
+.specials>span{
+  font-weight: bolder;
+  font-family: 'Markazi Text';
+  font-size: 3vw;
+  margin: 0vw 28vw 0 0;
+}
+
+.cards{
+  display:flex;
+  margin: 10vh 0 0 0;
+  gap: 4vw;
+}
+
+#Card, #Card1, #Card2{
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 1vw 1vw 0.5vw 0.5vw;
+}
+
+#CardImg, #CardImg1, #CardImg2{
+  border-radius: 1vw;
+}
+
+.foodName{
+  font-size: medium;
+  margin: 0 2vw 0 0;
+
+}
+
+.foodPrice{
+  color:#EE9972;
+  font-family: 'Karla';
+  font-size: 1.6vw;
+}
+
+.Order{
+  position: absolute;
+  bottom: 0.1vh;
+}
+
+.testimonials{
+  grid-area:testimonial;
+  grid-column: 1 / span 12;
+  background-color: #495e57;
+}
+
+.testimony{
+  font-size:x-large;
+  color:#F4CE14;
+  margin: 5vw 50vw 0 45vw;
+  font-weight: bold;
+  font-family: 'Markazi Text';
+}
+
+.boxes{
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.box{
+  background-color: #EE9972;
+  width: 10vw;
+  height: 10vw;
+  margin: 5vw 0 5vw 0;
+  font-weight: bold;
+
+}
+
+.aboutUs{
+  grid-area:abouts;
+  grid-column: 1 / span 12;
+  display: flex;
+  
+  gap: 4vw;
+  margin:5vw 20vw 2.5vw 16vw;
+}
+
+.aboutUsHeader{
+  font-weight: bold;
+  font-family: 'Markazi Text';
+}
+
+.aboutUsHeader1{
+  font-family: 'Markazi Text';
+}
+
+.MarieAdrian, .MarieAdrian1{
+  grid-row:1 / 3;
+}
+
+.MarieAdrian{
+  width: 20vw;
+  height: 15vw;
+  grid-column: 2 / 2;
+}
+.MarieAdrian1{
+  width: 20vw;
+  height: 15vw;
+  grid-column: 3/-1;
+}
+
+footer{
+  grid-area: footer;
+  grid-column: 1 / span 12;
+  background-color: rgba(0,0,0,0.2);
+}
+
+div>h3{
+  font-size: small;
+  color: #495e57;
+}
+
+div>li{
+  list-style-type: none;
+  line-height: 10%;
+}
+
+.footer{
+  margin:5vw 20vw 2.5vw 16vw;
+  display: flex;
+  font-size: small;
+  gap: 8vw;
+}
+
+.buttons{
+
+  border-radius: 1vw;
+  border: none;
+  font-size: 1vw;
+  padding: 0.8vw;
+  font-weight: bold;
+  background-color:#F4CE14;
 }

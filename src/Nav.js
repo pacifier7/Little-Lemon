@@ -1,12 +1,13 @@
 import Logo from "./images/Logo .svg";
 import React from 'react';
+import './App.css';
 
 
 
 function Nav() {
     return (
       <nav>
-        <ul>
+        <ul class="container">
           <li>
             <a href="/">
               <img src={Logo} alt="Logo" />

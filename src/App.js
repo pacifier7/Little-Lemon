@@ -10,37 +10,10 @@ import Home from "./Home";
 
 
 function App() {
-  let component = <Home />
-  console.log(window.location.pathname);
-  switch (window.location.pathname){
-    case "/":
-      component = <Home />
-      break
-    case "/About":
-      component = <About />
-      break
-    case "/Menu":
-      component = <Menu />
-      break
-    case "/Reservation/Reservation":
-      component = <Reservation />
-      break
-    case "/OrderOnline":
-      component = <OrderOnline />
-      break
-    case "/Login":
-      component = <Login />
-      break
-    default:
-      component = <Home />
-  }
+ 
 
   return (
-    <>
-     <Nav/>
-     <main>{component}</main>
-     <Footer/>
-    </>
+    <Home/>
   );
 }
 
