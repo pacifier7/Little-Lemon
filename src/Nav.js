@@ -1,7 +1,7 @@
 import Logo from "./images/Logo .svg";
 import React from 'react';
 import './App.css';
-
+import {Routes,Route, Link} from "react-router-dom";
 
 
 function Nav() {
@@ -9,46 +9,48 @@ function Nav() {
       <nav>
         <ul class="container">
           <li>
-            <a href="/">
+            <Link to="/">
               <img src={Logo} alt="Logo" />
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="/">
-              Home
-            </a>
+            <Link to="/">
+             Home
+            </Link> 
           </li>
 
           <li>
-            <a href="/About">
+            <Link to="/About">
               About
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="/Menu">
+            <Link to="/Menu">
               Menu
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="/Reservation/Reservation">
+            <Link to="/OrderOnline">
+              OrderOnline
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/Reservation">
               Reservations
-            </a>
+            </Link>
           </li>
          
           <li>
-            <a href="/OrderOnline">
-              Order Online
-            </a>
+            <Link to="/Login">
+              Login
+            </Link>
           </li>
 
-          <li>
-            <a href="/Login">
-              Login
-            </a>
-          </li>
+          
         
             
         </ul>

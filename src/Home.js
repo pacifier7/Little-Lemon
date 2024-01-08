@@ -19,37 +19,11 @@ import Button from 'react-bootstrap/Button';
 
 
 function Home(){
-    let component
-  console.log(window.location.pathname);
-  switch (window.location.pathname){
-    case "/":
-      component = <></>
-      break
-    case "/About":
-      component = <About />
-      break
-    case "/Menu":
-      component = <Menu />
-      break
-    case "/Reservation/Reservation":
-      component = <Reservation />
-      break
-    case "/OrderOnline":
-      component = <OrderOnline />
-      break
-    case "/Login":
-      component = <Login />
-      break
-    default:
-      component = <Home />
-  }
+   
 
   return (
     
     <div class="container1">
-      <div class="navArea">
-        <Nav/>
-      </div>
 
       
       < div class="hero">
@@ -190,9 +164,6 @@ function Home(){
         <img class="MarieAdrian1" src={restaurantChefB} alt="chef" style={{margin:'0 1vw 0 1vw'}} />
         </div>
       </div>
-    
-
-      <main>{component}</main>
       <Footer/>
     </div>
     

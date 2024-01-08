@@ -1,9 +1,12 @@
 import './App.css';
 import Logo from "./images/Logo .svg";
+import { useState} from 'react';
 
 
 function Footer() {
+   
     return (
+        <>
         <footer >
             <div class="footer">
                 <div>
@@ -39,6 +42,7 @@ function Footer() {
                 </div>
             </div>
         </footer>
+        </>
     );
   }
   
