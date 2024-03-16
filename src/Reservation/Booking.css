@@ -1,0 +1,77 @@
+.bookContainer{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "loyaltyBonus"
+                        "bookingDetails";
+    grid-template-columns: 20vw 1fr 20vw;
+    grid-template-rows: 30vh 75vh;
+    column-gap: 2.0vw;
+}
+
+.loyalty{
+    grid-area: loyaltyBonus;
+    grid-column: 1/ span 3;
+    background-color: #495e57;
+    display: flex;
+}
+
+.banner{
+    margin:0 20vw 2.5vw 16vw;
+    padding:1.25vw 1.25vw 1.25vw 1.25vw;
+    width: 60vw;
+    height: 30vw;
+    font-weight: bold;
+    font-family: 'Markazi Text';
+    font-size: 3vw;
+    color: #F4CE14;
+    margin:0;
+  }
+
+  .resImg{
+    width: 25vw;
+    height: 30vh;
+  }
+
+  .formContainer{
+    margin-top: 5vh;
+    grid-area: bookingDetails;
+    color:#495e57;
+    border-color:#495e57;
+    grid-column: 2/ span 1;
+  }
+
+  .formStructure{
+    
+      margin: 0 auto; 
+      width:500px;
+      
+  }
+
+  .buttons{
+
+    border-radius: 1vw;
+    border: none;
+    font-size: 1vw;
+    padding: 0.8vw;
+    font-weight: bold;
+    background-color:#F4CE14;
+  }
+
+  input{
+    border-radius: 0.25vw;
+    width: 200px;
+    display: block;
+    border-color:#495e57;
+  }
+
+  label{
+    color: #495e57;
+    margin-bottom: 0px;
+    font-weight: bold;
+    display: block;
+  }
+  sup{
+    display: inline;
+    color:red;
+  }
+

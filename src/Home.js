@@ -4,9 +4,9 @@ import About from './About';
 import Menu from './Menu';
 import OrderOnline from './OrderOnline';
 import Login from './Login'; 
-import Reservation from './Reservation/Reservation';
 import Nav from "./Nav";
 import './App.css';
+import { Link } from "react-router-dom";
 import restaurantfood from "./images/restauranfood.jpg";
 import Card from 'react-bootstrap/Card';
 import greekSalad from "./images/greeksalad.jpg";
@@ -16,6 +16,7 @@ import MarieAdrian from "./images/MarioAndAdrianb.jpg";
 import EmptyStar from "./images/002-star-1.png";
 import restaurantChefB from "./images/restaurantchefB.jpg";
 import Button from 'react-bootstrap/Button';
+import ConfirmedBooking from './Reservation/ConfirmedBooking';
 
 
 function Home(){
@@ -37,7 +38,9 @@ function Home(){
            Recipes Served with a Modern
            Twist.</p>
            <p>
-           <Button variant="warning" class="buttons">Reserve a Table</Button>{' '}
+           <Link to="/booking">
+              <Button variant="warning" class="buttons">Reserve a Table</Button>{' '}
+           </Link>
            </p>
         </p>
         <img class="foodImg" src={restaurantfood} alt="Food" />
@@ -164,6 +167,7 @@ function Home(){
         <img class="MarieAdrian1" src={restaurantChefB} alt="chef" style={{margin:'0 1vw 0 1vw'}} />
         </div>
       </div>
+      
       <Footer/>
     </div>
     

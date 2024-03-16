@@ -4,7 +4,8 @@ import About from './About';
 import Menu from './Menu';
 import OrderOnline from './OrderOnline';
 import Login from './Login';
-import Reservation from './Reservation/Reservation';
+import {BookingPage} from './Reservation/BookingPage';
+import ConfirmedBooking from './Reservation/ConfirmedBooking';
 import Nav from "./Nav";
 import Home from "./Home";
 import {Routes, Route} from "react-router-dom";
@@ -30,7 +31,7 @@ function App() {
       </Routes>
 
       <Routes>
-        <Route path="/Reservation" element={<Reservation/>}/>
+        <Route path="/Reservation" element={<BookingPage/>}/>
       </Routes>
     
       <Routes>
@@ -39,6 +40,14 @@ function App() {
    
       <Routes>
         <Route path="/Login" element={<Login/>}/>
+      </Routes>
+
+      <Routes>
+        <Route path="/booking" element={<BookingPage/>}/>
+      </Routes>
+
+      <Routes>
+      <Route path="/confirmed" element={<ConfirmedBooking/> } />
       </Routes>
     </>
   );
